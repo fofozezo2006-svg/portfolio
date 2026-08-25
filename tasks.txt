@@ -1,0 +1,99 @@
+RESPONSIVE PORTFOLIO ASSIGNMENT
+================================
+
+OVERVIEW:
+Build a one-page portfolio for yourself using HTML and CSS. It should look
+good on a phone and on a desktop screen without you writing two different
+versions of it. You'll do that with flexbox for layout and relative units
+for sizing, instead of fixed pixel values everywhere.
+
+
+SECTIONS TO BUILD:
+
+1. HEADER / NAVIGATION
+   - Your name (or logo) on one side, a list of nav links on the other.
+   - Lay it out as a flex row with space between the two sides.
+   - Give the links their own row with consistent spacing between them.
+   - Use rem for the bar's padding/height so it holds up under zoom.
+
+2. HERO / ABOUT
+   - Your name, a one-line pitch, and optionally a portrait.
+   - Give this section real presence: size its height with vh so it
+     fills a solid share of the screen when the page loads.
+   - Arrange the text and image as a flex row that wraps to a stacked
+     column on narrow screens.
+   - Size the headline in rem; size anything nested inside it (an
+     accent word, an inline icon) in em so it scales with the headline.
+
+3. SKILLS
+   - A row of skill chips or short skill tags.
+   - Flex row with wrapping enabled so chips reflow onto new lines as
+     the window narrows.
+   - Chip padding in em, gap between chips in rem.
+
+4. PROJECTS
+   - Two or three project cards in a row.
+   - Each card should grow/shrink but never shrink past a sensible
+     minimum width, so cards wrap to a stacked layout on their own
+     when the screen gets too narrow for the row.
+   - Project images at 100% width inside their card so they scale to
+     whatever width the card ends up with.
+
+5. CONTACT / FOOTER
+   - Email and social links, laid out as a wrapping flex row.
+   - Vertical breathing room above/below in vh so it scales with the
+     viewport instead of staying frozen at one pixel amount.
+
+
+UNITS — USE EACH FOR WHAT IT'S GOOD AT:
+
+  rem   Relative to the root font-size. Use for anything that should
+        scale consistently with the page as a whole: section padding,
+        gaps, your overall type scale.
+
+  em    Relative to the current element's own font-size. Use for
+        anything that should scale with its immediate parent instead
+        of the whole page: padding inside a chip or button, an icon
+        next to text.
+
+  vh    1% of the viewport height. Use for section heights and
+        vertical spacing you want tied to screen size, like a hero
+        that always fills a fixed share of the screen.
+
+  vw    1% of the viewport width. Use sparingly — mainly for a
+        headline that should visibly grow on very wide screens.
+
+  %     Relative to the parent element's size. Use for things that
+        should fill whatever space their flex container gives them,
+        like an image at width: 100% inside a card.
+
+
+FLEXBOX — THE PROPERTIES YOU NEED:
+
+  display: flex;              turns a container into a flex row
+  flex-wrap: wrap;             lets items drop to a new line instead
+                                of overflowing when space runs out
+  justify-content / align-items   position items along and across the row
+  flex: 1 1 <basis>;           lets an item grow and shrink from a
+                                sensible starting width
+
+
+TESTING & REFINEMENT:
+- Open your page in a browser and resize the window from full width
+  down to phone width.
+- Nothing should overlap, and nothing should scroll sideways.
+- Text should stay readable at every width.
+- Adjust your unit choices if something looks frozen or breaks.
+
+
+TIPS:
+- Build the structure first, then layer in flexbox and sizing.
+- Keep your CSS organized by section, in the same order as your HTML.
+- A simple layout done cleanly beats a complex one done messily.
+- Test in the browser often as you go, not just at the end.
+
+
+SUBMISSION:
+- Include your HTML file and your CSS file.
+- Make sure it runs without errors and resizes cleanly.
+- Optional: a screenshot at desktop width and at phone width.
